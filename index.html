@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <link rel="icon" type="image/png" href="imgko/logo.jpeg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صالون Kotaiba للحلاقة</title>
+    <title>صالون Kotaiba</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -15,119 +16,311 @@
 </head>
 <body class="bg-white text-black min-h-screen flex flex-col">
     <!-- Header -->
-<header class="bg-black text-white py-4 sm:py-6 px-4 shadow-lg">
-    <div class="max-w-6xl mx-auto">
-        <!-- Mobile and Desktop Header -->
-        <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-3 sm:space-x-4 space-x-reverse">
-                <!-- مكان الشعار -->
-                <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                    <img src="imgko/logo.jpeg" alt="شعار الموقع" class="w-full h-full object-cover">
+    <header class="bg-black text-white py-4 sm:py-6 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto">
+            <!-- Mobile and Desktop Header -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3 sm:space-x-4 space-x-reverse">
+                    <!-- مكان الشعار -->
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center">
+                        <img src="imgko/logo.jpeg" alt="شعار صالون Kotaiba" class="w-full h-full object-cover rounded-full">
+                    </div>
+
+                    <!-- اسم الصالون -->
+                    <div>
+                        <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold">Kotaiba Salon</h1>
+                        <p class="text-gray-300 text-xs sm:text-sm hidden sm:block">صالون الحلاقة الراقي</p>
+                    </div>
                 </div>
-                <!-- اسم الصالون -->
-                <div>
-                    <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold">Kotaiba Salon</h1>
-                    <p class="text-gray-300 text-xs sm:text-sm hidden sm:block">صالون الحلاقة الراقي</p>
-                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 space-x-reverse">
+                    <a href="#home" class="hover:text-gray-300 transition-colors text-sm lg:text-base">الرئيسية</a>
+                    <a href="#offers" class="hover:text-gray-300 transition-colors text-sm lg:text-base">العروض</a>
+                    <a href="#services" class="hover:text-gray-300 transition-colors text-sm lg:text-base">الخدمات</a>
+                    <a href="#products" class="hover:text-gray-300 transition-colors text-sm lg:text-base">منتجاتنا</a>
+                </nav>
             </div>
             
-            <!-- Mobile Menu Button -->
-            <button id="mobileMenuBtn" class="md:hidden text-white p-2">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
-            
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 lg:space-x-8 space-x-reverse">
-                <a href="#home" class="hover:text-gray-300 transition-colors text-sm lg:text-base">الرئيسية</a>
-                <a href="#offers" class="hover:text-gray-300 transition-colors text-sm lg:text-base">العروض</a>
-                <a href="#services" class="hover:text-gray-300 transition-colors text-sm lg:text-base">الخدمات</a>
+            <!-- Mobile Navigation Menu -->
+            <nav id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-700 hidden">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="#home" class="hover:text-gray-300 transition-colors py-2">الرئيسية</a>
+                    <a href="#offers" class="hover:text-gray-300 transition-colors py-2">العروض</a>
+                    <a href="#services" class="hover:text-gray-300 transition-colors py-2">الخدمات</a>
+                    <a href="#products" class="hover:text-gray-300 transition-colors py-2">منتجاتنا</a>
+                </div>
             </nav>
         </div>
-        
-        <!-- Mobile Navigation Menu -->
-        <nav id="mobileMenu" class="md:hidden mt-4 pb-4 border-t border-gray-700 hidden">
-            <div class="flex flex-col space-y-3 pt-4">
-                <a href="#home" class="hover:text-gray-300 transition-colors py-2">الرئيسية</a>
-                <a href="#offers" class="hover:text-gray-300 transition-colors py-2">العروض</a>
-                <a href="#services" class="hover:text-gray-300 transition-colors py-2">الخدمات</a>
-                <a href="#contact" class="hover:text-gray-300 transition-colors py-2">اتصل بنا</a>
-            </div>
-        </nav>
-    </div>
-</header>
+    </header>
 
     <!-- Main Content Area -->
     <main class="flex-grow bg-gray-50">
         <div class="max-w-6xl mx-auto py-8 sm:py-12 lg:py-16 px-4">
             <div class="text-center">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-4 sm:mb-6 lg:mb-8">مرحباً بكم في صالون Kotaiba</h2>
-                <p class="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 sm:mb-10 lg:mb-12 px-4">نقدم لكم أفضل خدمات الحلاقة والعناية بالشعر</p>
+                <p class="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 sm:mb-10 lg:mb-12 px-4">نقدم لكم أفضل خدمات الحلاقة والعناية بالشعر و البشرة</p>
                 
-                <!-- مساحة للمحتوى المستقبلي -->
-                <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8 lg:p-12 border-2 border-dashed border-gray-300 mx-2 sm:mx-0">
-                    <i class="fas fa-plus-circle text-4xl sm:text-5xl lg:text-6xl text-gray-400 mb-3 sm:mb-4"></i>
-                    <h3 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-500 mb-2"> للعروض والخدمات</h3>
-                  <!--  <p class="text-sm sm:text-base text-gray-400">سنقوم بإضافة العروض والخدمات هنا</p> -->
+                <!-- قسم المنتجات -->
+                <div id="products" class="hidden">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-black mb-8">منتجاتنا المميزة</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        <!-- منتج 1 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                            <div class="h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="imgko/WhatsApp Image 2025-09-03 at 12.24.26 AM.jpeg" alt="جل الشعر" class="h-full object-contain">
+                            </div>
+
+                            <div class="p-4 sm:p-6">
+                                <h4 class="text-lg sm:text-xl font-semibold text-black mb-2">جل الشعر المقاوم للماء</h4>
+                                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">جل عالي الجودة يوفر تثبيتاً قوياً ولمعاناً طبيعياً للشعر، مقاوم للماء والرطوبة</p>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-black">60 JD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- منتج 2 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                            <div class="h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="imgko/WhatsApp Image 2025-09-03 at 5.40.30 PM.jpeg" alt="كريم الحلاقه" class="h-full object-contain">
+                            </div>
+
+                            <div class="p-4 sm:p-6">
+                                <h4 class="text-lg sm:text-xl font-semibold text-black mb-2">كريم الحلاقة </h4>
+                                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">كريم حلاقة غني بالزيوت الطبيعية يوفر حلاقة ناعمة ومريحة مع حماية البشرة</p>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-black">5 JD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- منتج 3 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                            <div class="h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="imgko/WhatsApp Image 2025-09-03 at 5.40.34 PM.jpeg" alt="زيت اللحية" class="h-full object-contain">
+                            </div>
+                            <div class="p-4 sm:p-6">
+                                <h4 class="text-lg sm:text-xl font-semibold text-black mb-2">زيت اللحية الطبيعي</h4>
+                                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">زيت طبيعي 100% يغذي اللحية ويجعلها ناعمة ولامعة مع رائحة منعشة تدوم طويلاً</p>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-black">50 JD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- منتج 4 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                            <div class="h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="imgko/WhatsApp Image 2025-09-03 at 5.40.42 PM.jpeg" alt="شامبو" class="h-full object-contain">
+                            </div>
+                            <div class="p-4 sm:p-6">
+                                <h4 class="text-lg sm:text-xl font-semibold text-black mb-2">شامبو الشعر المقوي</h4>
+                                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">شامبو مخصص للرجال يقوي الشعر ويمنع التساقط مع تنظيف عميق ولطيف</p>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-black">40 JD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- منتج 5 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                            <div class="h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="imgko/WhatsApp Image 2025-09-03 at 5.46.22 PM.jpeg" alt="واكس" class="h-full object-contain">
+                            </div>
+                            <div class="p-4 sm:p-6">
+                                <h4 class="text-lg sm:text-xl font-semibold text-black mb-2">واكس الشعر المات</h4>
+                                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">واكس بتركيبة مات يعطي مظهراً طبيعياً مع تحكم قوي في تصفيف الشعر</p>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-black">100 JD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- منتج 6 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                            <div class="h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="imgko/logo.jpeg" alt="لوشن" class="h-full object-contain">
+                            </div>
+                            <div class="p-4 sm:p-6">
+                                <h4 class="text-lg sm:text-xl font-semibold text-black mb-2">لوشن ما بعد الحلاقة</h4>
+                                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">لوشن مهدئ ومرطب للبشرة بعد الحلاقة يمنع التهيج ويترك البشرة ناعمة</p>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-black">600 JD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الصفحة الرئيسية -->
+                <div id="home">
+                    <!-- قسم الخدمات -->
+                    <div class="mb-12 sm:mb-16">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-black mb-8 text-center">خدماتنا المميزة</h3>
+                        <div class="space-y-6 sm:space-y-8">
+                            <!-- خدمة الحلاقة -->
+                            <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                                <div class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0 shadow-lg">
+                                    <img src="imgko/bar.png" alt="خدمة الحلاقة" class="w-full h-full object-cover">
+                                </div>
+
+                                <div class="text-center sm:text-right flex-grow">
+                                    <h4 class="text-xl sm:text-2xl font-semibold text-black mb-3">خدمة الحلاقة</h4>
+                                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                                        حلاقة احترافية بأحدث التقنيات والأدوات المعقمة. نقدم قصات عصرية وكلاسيكية تناسب جميع الأذواق والأعمار مع الاهتمام بأدق التفاصيل
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- خدمة العناية بالبشرة -->
+                            <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                                <div class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0 shadow-lg">
+                                    <img src="imgko/cle.png" alt="خدمة الحلاقة" class="w-full h-full object-cover">
+                                </div>
+                                <div class="text-center sm:text-right flex-grow">
+                                    <h4 class="text-xl sm:text-2xl font-semibold text-black mb-3">العناية بالبشرة</h4>
+                                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                                        جلسات عناية متخصصة للبشرة تشمل التنظيف العميق والترطيب والتقشير. نستخدم منتجات طبيعية عالية الجودة لضمان نتائج مثالية ونعومة فائقة
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- خدمة تنظيف البشرة -->
+                            <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                                <div class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0 shadow-lg">
+                                    <img src="imgko/cleen.png" alt="خدمة الحلاقة" class="w-full h-full object-cover">
+                                </div>
+                                <div class="text-center sm:text-right flex-grow">
+                                    <h4 class="text-xl sm:text-2xl font-semibold text-black mb-3">تنظيف البشرة</h4>
+                                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                                        تنظيف عميق للبشرة لإزالة الشوائب والرؤوس السوداء. جلسة مريحة ومنعشة تترك البشرة نظيفة ومشرقة مع استخدام تقنيات حديثة وآمنة
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- خدمة غسيل الشعر -->
+                            <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                                <div class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0 shadow-lg">
+                                    <img src="imgko/wosh.png" alt="خدمة الحلاقة" class="w-full h-full object-cover">
+                                </div>
+                                <div class="text-center sm:text-right flex-grow">
+                                    <h4 class="text-xl sm:text-2xl font-semibold text-black mb-3">غسيل الشعر</h4>
+                                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                                        غسيل احترافي للشعر بشامبو مخصص حسب نوع الشعر مع تدليك مريح لفروة الرأس. خدمة منعشة تترك الشعر نظيفاً وصحياً ورائحة جميلة
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- قسم العروض -->
+                    <div id="offers-section">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-black mb-8 text-center">عروضنا الخاصة</h3>
+                        <div class="space-y-6 sm:space-y-8">
+                            <!-- عرض الحلاقة واللحية -->
+                            <div class="bg-gradient-to-r from-black to-gray-800 text-white rounded-lg shadow-lg p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                                <div class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-xl">
+                                    <i class="fas fa-scissors text-4xl sm:text-5xl lg:text-6xl text-black"></i>
+                                </div>
+                                <div class="text-center sm:text-right flex-grow">
+                                    <h4 class="text-xl sm:text-2xl font-semibold mb-3">حلاقة شعر ولحية</h4>
+                                    <p class="text-gray-200 text-base sm:text-lg leading-relaxed mb-3">
+                                        عرض مميز يشمل حلاقة الشعر وتهذيب اللحية بأسلوب احترافي. خدمة شاملة بسعر مناسب
+                                    </p>
+                                    <div class="text-2xl sm:text-3xl font-bold text-yellow-400">8 JD</div>
+                                </div>
+                            </div>
+
+                            <!-- عرض الحلاقة مع تنظيف البشرة -->
+                            <div class="bg-gradient-to-r from-black to-gray-800 text-white rounded-lg shadow-lg p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                                <div class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-xl">
+                                    <i class="fas fa-magic text-4xl sm:text-5xl lg:text-6xl text-white"></i>
+                                </div>
+                                <div class="text-center sm:text-right flex-grow">
+                                    <h4 class="text-xl sm:text-2xl font-semibold mb-3">حلاقة مع تنظيف البشرة</h4>
+                                    <p class="text-gray-200 text-base sm:text-lg leading-relaxed mb-3">
+                                        باقة متكاملة تشمل الحلاقة وجلسة تنظيف عميق للبشرة. تجربة فاخرة للعناية الشاملة
+                                    </p>
+                                    <div class="text-2xl sm:text-3xl font-bold text-yellow-400">25 JD بدلا من 45</div>
+                                </div>
+                            </div>
+
+                            <!-- عرض الباقة الكاملة -->
+                            <div class="bg-gradient-to-r from-black to-gray-800 text-white rounded-lg shadow-lg p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                                <div class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-xl border-2 border-yellow-200">
+                                    <i class="fas fa-crown text-4xl sm:text-5xl lg:text-6xl text-black"></i>
+                                </div>
+                                <div class="text-center sm:text-right flex-grow">
+                                    <h4 class="text-xl sm:text-2xl font-semibold mb-3">الباقة الملكية الكاملة</h4>
+                                    <p class="text-gray-200 text-base sm:text-lg leading-relaxed mb-3">
+                                        تجربة فاخرة شاملة: حلاقة + تهذيب لحية + غسيل شعر + تنظيف بشرة + ماسك مرطب. كل ما تحتاجه في جلسة واحدة
+                                    </p>
+                                    <div class="text-2xl sm:text-3xl font-bold text-yellow-400">50 بدلا من 75</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-
     <!-- Footer -->
     <footer class="bg-black text-white py-6 sm:py-8 px-4">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- معلومات الاتصال -->
                 <div class="text-center sm:text-right">
-                   <!-- <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">معلومات الاتصال</h3> -->
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">معلومات الاتصال</h3>
                     <div class="space-y-2 sm:space-y-3">
-                       <div class="flex items-start justify-center sm:justify-start space-x-3 space-x-reverse">
+                     <div class="flex items-start justify-center sm:justify-start space-x-3 space-x-reverse">
                         <i class="fas fa-phone text-gray-300 text-sm sm:text-base mt-1"></i>
                         <div class="flex flex-col">
-                         <!-- الرقم الأول -->
+                        <!-- الرقم الأول -->
                         <span class="text-sm sm:text-base">0796519748</span>
-                         <!-- الرقم الثاني -->
+                        <!-- الرقم الثاني -->
                         <span class="text-sm sm:text-base">065921656</span>
                         </div>
-                    </div>
+                     </div>
 
                         <div class="flex items-center justify-center sm:justify-start space-x-3 space-x-reverse">
                             <i class="fas fa-globe text-gray-300 text-sm sm:text-base"></i>
                             <!-- ضع رابط الموقع هنا -->
-                            <a href="https://maps.app.goo.gl/DBntfCb467PaEFAE7?g_st=ipc" target="_blank" class="hover:text-gray-300 transition-colors text-sm sm:text-base break-all">
-www.kotaiba-salon.com</a>
+                          <a href="https://maps.app.goo.gl/DBntfCb467PaEFAE7?g_st=ipc" target="_blank" class="hover:text-gray-300 transition-colors text-sm sm:text-base break-all">www.kotaiba-salon.com
                         </div>
                     </div>
                 </div>
 
                 <!-- مواقع التواصل الاجتماعي -->
-  <div class="text-center sm:text-right">
-    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">تابعنا على</h3>
-    <div class="flex justify-center sm:justify-start space-x-3 sm:space-x-4 space-x-reverse">
-        <!-- إنستغرام -->
-        <a href="https://www.instagram.com/kotaibasalon?igsh=MWNlN29sOTI4YmttZA==" target="_blank" class="bg-gray-800 hover:bg-gray-700 p-2 sm:p-3 rounded-full transition-colors">
-            <i class="fab fa-instagram text-lg sm:text-xl"></i>
-        </a>
-        <!-- فيسبوك -->
-        <a href="https://www.facebook.com/share/16yWDfDMGR/?mibextid=wwXIfr" target="_blank" class="bg-gray-800 hover:bg-gray-700 p-2 sm:p-3 rounded-full transition-colors">
-            <i class="fab fa-facebook text-lg sm:text-xl"></i>
-        </a>
-        <!-- تويتر (X) -->
-        <a href="https://x.com/kotaibamen?s=21" target="_blank" class="bg-gray-800 hover:bg-gray-700 p-2 sm:p-3 rounded-full transition-colors">
-            <i class="fab fa-twitter text-lg sm:text-xl"></i>
-        </a>
-        <!-- تيك توك (يبقى كما هو) -->
-        <a href="#" class="bg-gray-800 hover:bg-gray-700 p-2 sm:p-3 rounded-full transition-colors">
-            <i class="fab fa-tiktok text-lg sm:text-xl"></i>
-        </a>
-    </div>
-</div>
+                <div class="text-center sm:text-right">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">تابعنا على</h3>
+                    <div class="flex justify-center sm:justify-start space-x-3 sm:space-x-4 space-x-reverse">
+                     <!-- إنستغرام -->
+                    <a href="https://www.instagram.com/kotaibasalon?igsh=MWNlN29sOTI4YmttZA==" target="_blank" class="bg-gray-800 hover:bg-gray-700 p-2 sm:p-3 rounded-full transition-colors">
+                    <i class="fab fa-instagram text-lg sm:text-xl"></i>
+                    </a>
+                      <!-- فيسبوك -->
+                    <a href="https://www.facebook.com/share/16yWDfDMGR/?mibextid=wwXIfr" target="_blank" class="bg-gray-800 hover:bg-gray-700 p-2 sm:p-3 rounded-full transition-colors">
+                    <i class="fab fa-facebook text-lg sm:text-xl"></i>
+                    </a>
+                    <!-- تويتر (X) -->
+                    <a href="https://x.com/kotaibamen?s=21" target="_blank" class="bg-gray-800 hover:bg-gray-700 p-2 sm:p-3 rounded-full transition-colors">
+                    <i class="fab fa-twitter text-lg sm:text-xl"></i>
+                    </a>
+
+                    </div>
+                </div>
 
                 <!-- معلومات الصالون -->
                 <div class="text-center sm:text-right sm:col-span-2 lg:col-span-1">
                     <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">صالون Kotaiba</h3>
                     <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-                        نقدم أفضل خدمات الحلاقة والعناية بالشعر و البشرة بأحدث التقنيات والأساليب العصرية
+                        نقدم أفضل خدمات الحلاقة والعناية بالشعر بأحدث التقنيات والأساليب العصرية
                     </p>
                 </div>
             </div>
@@ -135,7 +328,7 @@ www.kotaiba-salon.com</a>
             <!-- حقوق النشر -->
             <div class="border-t border-gray-800 mt-6 sm:mt-8 pt-4 sm:pt-6 text-center">
                 <p class="text-gray-400 text-xs sm:text-sm">
-                   © 2024 Kotaiba Salon. All rights reserved.
+                    © 2025 Kotaiba Salon. All rights reserved.
                 </p>
             </div>
         </div>
@@ -168,8 +361,46 @@ www.kotaiba-salon.com</a>
                 menuIcon.classList.add('fa-bars');
             });
         });
+
+        // Navigation functionality
+        function showSection(sectionId) {
+            // Hide all sections
+            document.getElementById('home').classList.add('hidden');
+            document.getElementById('products').classList.add('hidden');
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        // Add click events to navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href').substring(1);
+                if (sectionId === 'home' || sectionId === 'products') {
+                    showSection(sectionId);
+                } else if (sectionId === 'offers') {
+                    // Show home section first
+                    showSection('home');
+                    // Then scroll to offers section
+                    setTimeout(() => {
+                        document.getElementById('offers-section').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 100);
+                }
+            });
+        });
+
+        // Show home section by default
+        showSection('home');
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97900ad231d632b0',t:'MTc1Njg0NzkzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97a5873c15848aaf',t:'MTc1NzA3MzIyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
 
+<!-- بدلاً من -->
+<a href="#" class="bg-gray-800...">
 
+<!-- ضع -->
+<a href="https://instagram.com/kotaiba_salon" target="_blank" class="bg-gray-800...">
