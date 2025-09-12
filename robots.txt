@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salonkotaiba.netlify.app/sitemap.xml
