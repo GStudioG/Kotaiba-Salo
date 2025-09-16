@@ -106,7 +106,74 @@
             <div class="text-center">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-4 sm:mb-6 lg:mb-8">مرحباً بكم في صالون Kotaiba</h2>
                 <p class="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 sm:mb-10 lg:mb-12 px-4">نقدم لكم أفضل خدمات الحلاقة والعناية بالشعر و البشرة</p>
-                
+                <div style="max-width:800px;margin:auto;position:relative;overflow:hidden; background:white; border-radius:10px;">
+  <!-- الصور -->
+  <img class="slide" src="imgko/wel.webp" style="width:100%; display:block; object-fit:contain; height:500px; background:white; border-radius:10px;">
+  <img class="slide" src="imgko/time.webp" style="width:100%; display:none; object-fit:contain; height:500px; background:white; border-radius:10px;">
+
+  <!-- أزرار حديثة -->
+  <button onclick="prevSlide()" style="
+      position:absolute;
+      left:10px;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.4);
+      color:white;
+      border:none;
+      border-radius:50%;
+      width:40px;
+      height:40px;
+      font-size:24px;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 2px 6px rgba(0,0,0,0.5);
+  " onmouseover="this.style.background='rgba(0,0,0,0.7)'" onmouseout="this.style.background='rgba(0,0,0,0.4)'">⟨</button>
+
+  <button onclick="nextSlide()" style="
+      position:absolute;
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.4);
+      color:white;
+      border:none;
+      border-radius:50%;
+      width:40px;
+      height:40px;
+      font-size:24px;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 2px 6px rgba(0,0,0,0.5);
+  " onmouseover="this.style.background='rgba(0,0,0,0.7)'" onmouseout="this.style.background='rgba(0,0,0,0.4)'">⟩</button>
+</div>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let current = 0;
+
+function showSlide(index){
+    slides.forEach((slide,i)=>{
+        slide.style.display = (i === index) ? "block" : "none";
+    });
+}
+
+function nextSlide(){
+    current = (current + 1) % slides.length;
+    showSlide(current);
+}
+
+function prevSlide(){
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+}
+
+// عرض أول صورة
+showSlide(current);
+
+// تشغيل تلقائي كل 4 ثواني
+setInterval(nextSlide, 4000);
+</script>
+
                 <!-- قسم المنتجات -->
                 <div id="products" class="hidden">
                     <h3 class="text-2xl sm:text-3xl font-bold text-black mb-8">منتجاتنا المميزة</h3>
@@ -442,6 +509,7 @@ document.getElementById("imageModal").addEventListener("click", function(e) {
 
 <!-- ضع -->
 <a href="https://instagram.com/kotaiba_salon" target="_blank" class="bg-gray-800...">
+
 
 
 
